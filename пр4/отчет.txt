@@ -1,0 +1,177 @@
+hello.c
+
+#include <stdio.h>
+
+
+int main() {
+    printf("Hello, World!\n");
+
+
+    return 0;
+}
+
+valgrind ./hello
+Ошибки отсутствуют.
+
+==4008== HEAP SUMMARY:
+==4008==   in use at exit: 0 bytes in 0 blocks
+==4008==   total heap usage: 1 allocs, 1 frees, 1,024 bytes allocated
+==4008==
+==4008== All heap blocks were freed -- no leaks are possible
+==4008== ERROR SUMMARY: 0 errors from 0 contexts
+
+leak.c
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main() {
+    int* data = malloc(5 * sizeof(int));
+    data[0] = 42;
+    printf("Первый элемент: %d\n", data[0]);
+    free(data); // эта строка была добавлена
+
+
+    return 0;
+}
+
+
+Изначально память, выделенная функцией malloc, не была освобождена, что приводило к утечке 20 байт.
+Добавлена функция free(data) для освобождения памяти перед завершением программы.
+
+
+valgrind ./leak
+До исправления
+Обнаружена утечка 20 байт.
+==5194== HEAP SUMMARY:
+==5194==   in use at exit: 20 bytes in 1 blocks
+==5194==   total heap usage: 2 allocs, 1 frees, 1,044 bytes allocated
+==5194==
+==5194== LEAK SUMMARY:
+==5194==   definitely lost: 20 bytes in 1 blocks
+
+
+После исправления
+Утечка устранена.
+==5718== HEAP SUMMARY:
+==5718==   in use at exit: 0 bytes in 0 blocks
+==5718==   total heap usage: 2 allocs, 2 frees, 1,044 bytes allocated
+==5718==
+==5718== All heap blocks were freed -- no leaks are possible
+==5718== ERROR SUMMARY: 0 errors from 0 contexts
+overflow.c
+
+
+#include <stdio.h>
+
+
+int main() {
+    int arr[5];
+    for(int i = 0; i <= 5; i++){
+        arr[i] = i * 10;
+        printf("%d\n", arr[i]);
+    }
+
+
+    return 0;
+}
+
+
+В цикле for условие i <= 5 приводило к попытке записи по индексу arr[5], хотя массив arr размера 5 имеет индексы от 0 до 4. Это выход за границы массива.
+Условие цикла изменено на i < 5, что гарантирует обращение только к разрешенным индексам
+
+
+valgrind ./overflow
+До исправления
+Некорректная логика привела к записи 6 элементов.
+0
+10
+20
+30
+40
+50
+==7337== 
+==7337== HEAP SUMMARY:
+==7337==     in use at exit: 0 bytes in 0 blocks
+==7337==   total heap usage: 1 allocs, 1 frees, 1,024 bytes allocated
+==7337== 
+==7337== All heap blocks were freed -- no leaks are possible
+==7337== 
+==7337== For lists of detected and suppressed errors, rerun with: -s
+==7337== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+
+После исправления 
+0
+10
+20
+30
+40
+==8993== 
+==8993== HEAP SUMMARY:
+==8993==     in use at exit: 0 bytes in 0 blocks
+==8993==   total heap usage: 1 allocs, 1 frees, 1,024 bytes allocated
+==8993== 
+==8993== All heap blocks were freed -- no leaks are possible
+==8993== 
+==8993== For lists of detected and suppressed errors, rerun with: -s
+==8993== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+abs_example.c
+
+
+#include <stdio.h>
+
+
+int my_abs(int x){
+    if(x < 0){
+        return -x;
+    }else {
+        return x;
+    }
+}
+
+
+int main() {
+    printf("%d\n", my_abs(-11));
+    printf("%d\n", my_abs(11));
+    printf("%d\n", my_abs(0));
+    return 0;
+}
+
+
+отчет о покрытии
+Покрытие 100%, все ветви функции my_abs были протестированы.
+Lines executed:100.00% of 9
+Creating 'abs_example.c.gcov'
+
+
+        -:    0:Source:abs_example.c
+        -:    0:Graph:abs_example.gcno
+        -:    0:Data:abs_example.gcda
+        -:    0:Runs:1
+        -:    1:#include <stdio.h>
+        -:    2:
+        3:    3:int my_abs(int x){
+        3:    4:    if(x < 0){
+        1:    5:        return -x;
+        -:    6:    }else {
+        2:    7:        return x;
+        -:    8:    }
+        -:    9:}
+        -:   10:
+        1:   11:int main() {
+        1:   12:    printf("%d\n", my_abs(-11));
+        1:   13:    printf("%d\n", my_abs(11));
+        1:   14:    printf("%d\n", my_abs(0));
+        1:   15:    return 0;
+        -:   16:}
+
+
+
+
+
+
+
+
+
