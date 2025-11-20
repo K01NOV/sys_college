@@ -1,0 +1,4 @@
+.:
+err.txt
+files.txt
+lab6

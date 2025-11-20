@@ -1,0 +1,195 @@
+Часть 1.
+1.  Команда: echo $$
+    Вывод: 427
+2.  Команда: cd /proc
+    Вывод: 
+    total 0
+    dr-xr-xr-x  9 root   root      0 Nov 19 06:49 1
+    dr-xr-xr-x  9 vscode vscode    0 Nov 19 06:50 109
+    dr-xr-xr-x  9 root   root      0 Nov 19 06:50 151
+    dr-xr-xr-x  9 vscode vscode    0 Nov 19 06:50 249
+    dr-xr-xr-x  9 vscode vscode    0 Nov 19 06:50 258
+    dr-xr-xr-x  9 vscode vscode    0 Nov 19 06:50 282
+    dr-xr-xr-x  9 vscode vscode    0 Nov 19 06:50 297
+    dr-xr-xr-x  9 vscode vscode    0 Nov 19 06:50 343
+    dr-xr-xr-x  9 vscode vscode    0 Nov 19 06:50 391
+    dr-xr-xr-x  9 vscode vscode    0 Nov 19 06:50 427
+    dr-xr-xr-x  9 vscode vscode    0 Nov 19 06:50 470
+    dr-xr-xr-x  9 vscode vscode    0 Nov 19 06:50 521
+    dr-xr-xr-x  9 root   root      0 Nov 19 06:50 590
+    dr-xr-xr-x  9 root   root      0 Nov 19 09:37 65140
+    dr-xr-xr-x  9 vscode vscode    0 Nov 19 09:37 65142
+    drwxrwxrwt  2 root   root     40 Nov 19 06:49 acpi
+    -r--r--r--  1 root   root      0 Nov 19 06:50 bootconfig
+    -r--r--r--  1 root   root      0 Nov 19 06:50 buddyinfo
+    dr-xr-xr-x  4 root   root      0 Nov 19 06:49 bus
+    -r--r--r--  1 root   root      0 Nov 19 06:50 cgroups
+    -r--r--r--  1 root   root    175 Nov 19 06:50 cmdline
+    -r--r--r--  1 root   root      0 Nov 19 06:50 consoles
+    -r--r--r--  1 root   root      0 Nov 19 06:50 cpuinfo
+    -r--r--r--  1 root   root      0 Nov 19 06:50 crypto
+    -r--r--r--  1 root   root      0 Nov 19 06:50 devices
+    -r--r--r--  1 root   root      0 Nov 19 06:50 diskstats
+    -r--r--r--  1 root   root      0 Nov 19 06:50 dma
+    dr-xr-xr-x  3 root   root      0 Nov 19 06:50 driver
+    dr-xr-xr-x  3 root   root      0 Nov 19 06:50 dynamic_debug
+    -r--r--r--  1 root   root      0 Nov 19 06:50 execdomains
+    -r--r--r--  1 root   root      0 Nov 19 06:50 fb
+    -r--r--r--  1 root   root      0 Nov 19 06:49 filesystems
+    dr-xr-xr-x  8 root   root      0 Nov 19 06:49 fs
+    -r--r--r--  1 root   root      0 Nov 19 06:50 interrupts
+    -r--r--r--  1 root   root      0 Nov 19 06:50 iomem
+    -r--r--r--  1 root   root      0 Nov 19 06:50 ioports
+    dr-xr-xr-x 19 root   root      0 Nov 19 06:49 irq
+    -r--r--r--  1 root   root      0 Nov 19 06:50 kallsyms
+    crw-rw-rw-  1 root   root   1, 3 Nov 19 06:49 kcore
+    crw-rw-rw-  1 root   root   1, 3 Nov 19 06:49 keys
+    -r--r--r--  1 root   root      0 Nov 19 06:50 key-users
+    -r--------  1 root   root      0 Nov 19 06:50 kmsg
+    -r--------  1 root   root      0 Nov 19 06:50 kpagecgroup
+    -r--------  1 root   root      0 Nov 19 06:50 kpagecount
+    -r--------  1 root   root      0 Nov 19 06:50 kpageflags
+    crw-rw-rw-  1 root   root   1, 3 Nov 19 06:49 latency_stats
+    -r--r--r--  1 root   root      0 Nov 19 06:50 loadavg
+    -r--r--r--  1 root   root      0 Nov 19 06:50 locks
+    -r--r--r--  1 root   root      0 Nov 19 06:50 mdstat
+    -r--r--r--  1 root   root      0 Nov 19 06:50 meminfo
+    -r--r--r--  1 root   root      0 Nov 19 06:50 misc
+    -r--r--r--  1 root   root      0 Nov 19 06:50 modules
+    lrwxrwxrwx  1 root   root     11 Nov 19 06:50 mounts -> self/mounts
+    -rw-r--r--  1 root   root      0 Nov 19 06:50 mtrr
+    lrwxrwxrwx  1 root   root      8 Nov 19 06:50 net -> self/net
+    -r--------  1 root   root      0 Nov 19 06:50 pagetypeinfo
+    -r--r--r--  1 root   root      0 Nov 19 06:50 partitions
+    dr-xr-xr-x  5 root   root      0 Nov 19 06:50 pressure
+    -r--r--r--  1 root   root      0 Nov 19 06:50 schedstat
+    drwxrwxrwt  2 root   root     40 Nov 19 06:49 scsi
+    lrwxrwxrwx  1 root   root      0 Nov 19 06:49 self -> 65142
+    -r--------  1 root   root      0 Nov 19 06:50 slabinfo
+    -r--r--r--  1 root   root      0 Nov 19 06:50 softirqs
+    -r--r--r--  1 root   root      0 Nov 19 06:50 stat
+    -r--r--r--  1 root   root      0 Nov 19 06:50 swaps
+    dr-xr-xr-x  1 root   root      0 Nov 19 06:49 sys
+    --w-------  1 root   root      0 Nov 19 06:49 sysrq-trigger
+    dr-xr-xr-x  5 root   root      0 Nov 19 06:50 sysvipc
+    lrwxrwxrwx  1 root   root      0 Nov 19 06:49 thread-self -> 65142/task/65142
+    crw-rw-rw-  1 root   root   1, 3 Nov 19 06:49 timer_list
+    dr-xr-xr-x  6 root   root      0 Nov 19 06:50 tty
+    -r--r--r--  1 root   root      0 Nov 19 06:50 uptime
+    -r--r--r--  1 root   root      0 Nov 19 06:50 version
+    -r--r--r--  1 root   root      0 Nov 19 06:50 version_signature
+    -r--------  1 root   root      0 Nov 19 06:50 vmallocinfo
+    -r--r--r--  1 root   root      0 Nov 19 06:50 vmstat
+    -r--r--r--  1 root   root      0 Nov 19 06:50 zoneinfo
+3.  Команда: cd 427, ls -l
+    Вывод:
+    total 0
+    -r--r--r--  1 vscode vscode 0 Nov 19 09:34 arch_status
+    dr-xr-xr-x  2 vscode vscode 0 Nov 19 09:34 attr
+    -rw-r--r--  1 vscode vscode 0 Nov 19 09:34 autogroup
+    -r--------  1 vscode vscode 0 Nov 19 09:34 auxv
+    -r--r--r--  1 vscode vscode 0 Nov 19 09:34 cgroup
+    --w-------  1 vscode vscode 0 Nov 19 09:34 clear_refs
+    -r--r--r--  1 vscode vscode 0 Nov 19 06:50 cmdline
+    -rw-r--r--  1 vscode vscode 0 Nov 19 09:34 comm
+    -rw-r--r--  1 vscode vscode 0 Nov 19 09:34 coredump_filter
+    -r--r--r--  1 vscode vscode 0 Nov 19 09:34 cpu_resctrl_groups
+    -r--r--r--  1 vscode vscode 0 Nov 19 09:34 cpuset
+    lrwxrwxrwx  1 vscode vscode 0 Nov 19 06:50 cwd -> /proc/427
+    -r--------  1 vscode vscode 0 Nov 19 06:50 environ
+    lrwxrwxrwx  1 vscode vscode 0 Nov 19 09:34 exe -> /bin/bash
+    dr-x------  2 vscode vscode 7 Nov 19 06:50 fd
+    dr-xr-xr-x  2 vscode vscode 0 Nov 19 09:34 fdinfo
+    -rw-r--r--  1 vscode vscode 0 Nov 19 09:34 gid_map
+    -r--------  1 vscode vscode 0 Nov 19 09:34 io
+    -r--------  1 vscode vscode 0 Nov 19 09:34 ksm_merging_pages
+    -r--------  1 vscode vscode 0 Nov 19 09:34 ksm_stat
+    -r--r--r--  1 vscode vscode 0 Nov 19 09:34 latency
+    -r--r--r--  1 vscode vscode 0 Nov 19 09:34 limits
+    -rw-r--r--  1 vscode vscode 0 Nov 19 09:34 loginuid
+    dr-x------  2 vscode vscode 0 Nov 19 09:34 map_files
+    -r--r--r--  1 vscode vscode 0 Nov 19 09:34 maps
+    -rw-------  1 vscode vscode 0 Nov 19 09:34 mem
+    -r--r--r--  1 vscode vscode 0 Nov 19 09:34 mountinfo
+    -r--r--r--  1 vscode vscode 0 Nov 19 09:34 mounts
+    -r--------  1 vscode vscode 0 Nov 19 09:34 mountstats
+    dr-xr-xr-x 55 vscode vscode 0 Nov 19 09:34 net
+    dr-x--x--x  2 vscode vscode 0 Nov 19 06:50 ns
+    -r--r--r--  1 vscode vscode 0 Nov 19 09:34 numa_maps
+    -rw-r--r--  1 vscode vscode 0 Nov 19 09:34 oom_adj
+    -r--r--r--  1 vscode vscode 0 Nov 19 09:34 oom_score
+    -rw-r--r--  1 vscode vscode 0 Nov 19 09:34 oom_score_adj
+    -r--------  1 vscode vscode 0 Nov 19 09:34 pagemap
+    -r--------  1 vscode vscode 0 Nov 19 09:34 patch_state
+    -r--------  1 vscode vscode 0 Nov 19 09:34 personality
+    -rw-r--r--  1 vscode vscode 0 Nov 19 09:34 projid_map
+    lrwxrwxrwx  1 vscode vscode 0 Nov 19 09:34 root -> /
+    -rw-r--r--  1 vscode vscode 0 Nov 19 09:34 sched
+    -r--r--r--  1 vscode vscode 0 Nov 19 09:34 schedstat
+    -r--r--r--  1 vscode vscode 0 Nov 19 09:34 sessionid
+    -rw-r--r--  1 vscode vscode 0 Nov 19 09:34 setgroups
+    -r--r--r--  1 vscode vscode 0 Nov 19 09:34 smaps
+    -r--r--r--  1 vscode vscode 0 Nov 19 09:34 smaps_rollup
+    -r--------  1 vscode vscode 0 Nov 19 09:34 stack
+    -r--r--r--  1 vscode vscode 0 Nov 19 06:50 stat
+    -r--r--r--  1 vscode vscode 0 Nov 19 06:50 statm
+    -r--r--r--  1 vscode vscode 0 Nov 19 06:50 status
+    -r--------  1 vscode vscode 0 Nov 19 09:34 syscall
+    dr-xr-xr-x  3 vscode vscode 0 Nov 19 09:34 task
+    -rw-r--r--  1 vscode vscode 0 Nov 19 09:34 timens_offsets
+    -r--r--r--  1 vscode vscode 0 Nov 19 09:34 timers
+    -rw-rw-rw-  1 vscode vscode 0 Nov 19 09:34 timerslack_ns
+    -rw-r--r--  1 vscode vscode 0 Nov 19 09:34 uid_map
+    -r--r--r--  1 vscode vscode 0 Nov 19 06:50 wchan
+4.  Команда: cd fd
+    Вывод: 
+    total 0
+    lrwx------ 1 vscode vscode 64 Nov 19 06:50 0 -> /dev/pts/0
+    lrwx------ 1 vscode vscode 64 Nov 19 06:50 1 -> /dev/pts/0
+    lrwx------ 1 vscode vscode 64 Nov 19 06:50 2 -> /dev/pts/0
+    l-wx------ 1 vscode vscode 64 Nov 19 06:50 22 -> /home/vscode/.vscode-remote/data/logs/20251119T065004/remoteagent.log
+    l-wx------ 1 vscode vscode 64 Nov 19 06:50 23 -> /home/vscode/.vscode-remote/data/logs/20251119T065004/remoteTelemetry.log
+    l-wx------ 1 vscode vscode 64 Nov 19 06:50 24 -> /home/vscode/.vscode-remote/data/logs/20251119T065004/ptyhost.log
+    lrwx------ 1 vscode vscode 64 Nov 19 06:50 255 -> /dev/pts/0
+Ответ на вопрос: стандартный ввод, вывод и поток ошибок соответствует первым трем файловым дескрипторам (0, 1, 2), 
+    определяется по номеру дескриптора, позволяют любой программе читать данные и записывать данные, отделять сообщение об ошибке от вывода программы. 
+    lrwx------ 1 vscode vscode 64 Nov 19 06:50 0 -> /dev/pts/0
+    lrwx------ 1 vscode vscode 64 Nov 19 06:50 1 -> /dev/pts/0
+    lrwx------ 1 vscode vscode 64 Nov 19 06:50 2 -> /dev/pts/0
+
+Часть 2.
+1.  Команда: echo "Hello world"
+    Вывод: Hello world
+2.  Команда: ls >&2
+    Вывод: пр1  пр2  пр4  пр5  пр6
+3.  Команда: ls . folder > files.txt 2> err.txt
+    Вывод:
+    files.txt:
+        .:
+        err.txt
+        files.txt
+        lab6
+    err.txt:
+        ls: cannot access 'folder': No such file or directory
+4.  Команда: cat files.txt err.txt
+    Вывод:
+    .:
+    err.txt
+    files.txt
+    lab6
+    ls: cannot access 'folder': No such file or directory
+Ответ на вопрос: ос назначает потокам разные файловые дескрипторы, благодоря чему возможно перенаправлять их независимо друг от друга
+
+Часть 3.
+Ответ на вопрос: владелец может читать и перезаписывать данные файла а остальные только читать
+
+Часть 4. 
+В log.txt записалось success
+
+Часть 5.
+Создан Makefile с запуском и очисткой
+
+Часть 6. 
+./app > out.txt
+./app 2> err.txt
+./app > all.txt 2>&1
