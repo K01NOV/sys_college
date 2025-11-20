@@ -3,6 +3,7 @@
         "wait.h": "c",
         "unistd.h": "c",
         "stdio.h": "c",
-        "filelib.h": "c"
+        "filelib.h": "c",
+        "string.h": "c"
     }
 }
